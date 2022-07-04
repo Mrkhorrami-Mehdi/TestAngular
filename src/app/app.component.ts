@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Para';
+  login = new FormGroup({
+    email: new FormControl('',[Validators.required , Validators.email]),
+    pass : new FormControl('',[Validators.required,Validators.minLength(8)]),
+  })
+
+  onSubmit(){
+    console.log(this.login.value)
+  }
 }

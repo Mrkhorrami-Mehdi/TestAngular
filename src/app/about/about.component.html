@@ -1,21 +1,23 @@
-<form class="row g-3 col-10 " id="form">
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Name</label>
-      <input type="text" placeholder="Name" class="form-control" id="inputEmail4">
-    </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">KodMeli</label>
-      <input type="text" placeholder="KodMlei" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputAddress" placeholder="example@gmail.com">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress2" class="form-label">Password</label>
-      <input type="password" class="form-control" id="inputAddress2" placeholder="Password">
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Sign in</button>
-    </div>
-  </form>
+<form class="row g-3 col-10 " id="form" (ngSubmit)="onSubmit()"  name="loginform"  [formGroup]="login">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Name</label>
+    <input type="text" placeholder="Name" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">KodMeli</label>
+    <input type="text" placeholder="KodMlei" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Email</label>
+  <input formControlName="email"  type="email" class="form-control" id="inputAddress" placeholder="example@gmail.com">
+  <p *ngIf="" >ajscascujash</p>
+  <p>eamill is regired</p>
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Password</label>
+    <input formControlName="pass" type="password" class="form-control" id="inputAddress2" placeholder="Password">
+  </div>
+  <div class="col-12">
+    <button type="submit" [disabled]="!login.valid" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
