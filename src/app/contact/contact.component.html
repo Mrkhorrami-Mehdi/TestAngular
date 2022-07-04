@@ -1,0 +1,25 @@
+<section>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nmae</th>
+          <th scope="col">UserName</th>
+          <th scope="col">ViewMore</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of users ; let w=index">
+          <th scope="row">{{i.id}}</th>
+          <td>{{i.name}}</td>
+          <td>{{i.username}}</td>
+          <td><p id="More" (click)="click(w)">More</p></td>
+        </tr>
+      </tbody>
+    </table>
+</section>
+
+ 
+
+
+
