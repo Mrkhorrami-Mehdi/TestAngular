@@ -9,7 +9,7 @@ import { FormGroup , Validator , FormControl, Validators } from '@angular/forms'
 })
 export class AboutComponent implements OnInit {
   
-  
+  flag = true;
 
   constructor() { }
    login:any
@@ -17,6 +17,7 @@ export class AboutComponent implements OnInit {
       this.login = new FormGroup({
       email: new FormControl('',[Validators.required , Validators.email]),
       pass : new FormControl('',[Validators.required,Validators.minLength(8)]),
+      name : new FormControl('',[Validators.required]) 
     })
   }
   onSubmit(){

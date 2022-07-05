@@ -1,7 +1,7 @@
 <form class="row g-3 col-10 " id="form" (ngSubmit)="onSubmit()"  name="loginform"  [formGroup]="login">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Name</label>
-    <input type="text" placeholder="Name" class="form-control" id="inputEmail4">
+    <input  formControlName="name" type="text" placeholder="Name" class="form-control" id="inputEmail4">
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">KodMeli</label>
@@ -10,8 +10,7 @@
   <div class="col-12">
     <label for="inputAddress" class="form-label">Email</label>
   <input formControlName="email"  type="email" class="form-control" id="inputAddress" placeholder="example@gmail.com">
-  <p *ngIf="" >ajscascujash</p>
-  <p>eamill is regired</p>
+  <p ></p>
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">Password</label>
